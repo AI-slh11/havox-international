@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havox International | Premium Training & AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        havox: {
+                            900: '#000000',
+                            800: '#0a0a0a',
+                            primary: '#ffffff', 
+                            accent: '#9ca3af', 
+                        }
+                    },
+                    animation: {
+                        blob: "blob 15s infinite",
+                    },
+                    keyframes: {
+                        blob: {
+                            "0%": { transform: "translate(0px, 0px) scale(1)" },
+                            "33%": { transform: "translate(40px, -50px) scale(1.2)" },
+                            "66%": { transform: "translate(-30px, 30px) scale(0.8)" },
+                            "100%": { transform: "translate(0px, 0px) scale(1)" },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #050505;
+            color: #f3f4f6;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #ffffff, #6b7280);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        input, select {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        input:focus, select:focus {
+            border-color: #ffffff;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        select option {
+            background-color: #0a0a0a;
+            color: white;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen relative">
+
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-gray-500 rounded-full mix-blend-overlay filter blur-[100px] opacity-40 animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-[35rem] h-[35rem] bg-white rounded-full mix-blend-overlay filter blur-[120px] opacity-20 animate-blob" style="animation-delay: 2s"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[45rem] h-[45rem] bg-gray-600 rounded-full mix-blend-overlay filter blur-[120px] opacity-30 animate-blob" style="animation-delay: 4s"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 glass-panel border-b-0 border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="havox-logo.png" alt="Havox International Logo" class="h-10 w-auto bg-white rounded p-1">
+                    <div class="font-bold text-2xl tracking-tighter hidden sm:block text-white">
+                        HAVOX <span class="text-gray-500 font-light">INTL.</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-white text-gray-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#programs" class="hover:text-white text-gray-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Programs</a>
+                        <a href="#enroll" class="bg-white hover:bg-gray-200 text-black px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-[0_0_15px_rgba(255,255,255,0.3)]">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h2 class="text-sm font-semibold text-gray-400 tracking-widest uppercase mb-3">A Havox International Company</h2>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-white">
+                Master the Art of <br />
+                <span class="gradient-text">Communication & AI</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto mb-10">
+                From executive influence and public speaking to cutting-edge AI automation for students. We build the next generation of global leaders.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#programs" class="glass-panel hover:bg-white/10 text-white px-8 py-4 rounded-full font-semibold transition-all">Explore Programs</a>
+                <a href="#enroll" class="bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]">Apply Today</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="py-20 relative z-10">
+        <!-- Notice we removed bg-black here so the background orbs show through -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Our Elite Divisions</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Select a program tailored to your goals. Currently featuring specialized AI cohorts for students and executive presentation training.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Program 1 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-white/40 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-microphone-lines text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-white">VoX-Publica</h3>
+                    <p class="text-gray-300 text-sm font-medium mb-4 uppercase tracking-wider">The Art of Public Speaking</p>
+                    <p class="text-gray-400 mb-6">Overcome stage fright and master the fundamentals of commanding a room. Perfect for aspiring speakers and professionals.</p>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-white/40 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-graduation-cap text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-white">Junior Vox</h3>
+                    <p class="text-gray-300 text-sm font-medium mb-4 uppercase tracking-wider">Speaking & Presentation for Students</p>
+                    <p class="text-gray-400 mb-6">Build confidence early. A specialized curriculum designed to help students articulate ideas clearly and present with authority.</p>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="glass-panel p-8 rounded-2xl hover:border-white/40 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-tie text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-white">Havox-ELITE</h3>
+                    <p class="text-gray-300 text-sm font-medium mb-4 uppercase tracking-wider">Executive Language & Influence</p>
+                    <p class="text-gray-400 mb-6">Corporate training for excellence. Learn high-stakes negotiation, corporate storytelling, and executive presence.</p>
+                </div>
+
+                <!-- Program 4 (AI Focus) -->
+                <div class="glass-panel p-8 rounded-2xl border-white/20 relative overflow-hidden group hover:border-white/50 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+                    <div class="absolute top-0 right-0 bg-white text-black text-xs font-bold px-3 py-1 rounded-bl-lg tracking-wider">NOW ENROLLING</div>
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-robot text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 text-white">Havox AI Program</h3>
+                    <p class="text-gray-300 text-sm font-medium mb-4 uppercase tracking-wider">Automation & AI for Students</p>
+                    <p class="text-gray-400 mb-6">Learn to build workflows, engineer prompts, and understand the architecture of artificial intelligence. Specialized student cohorts available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="enroll" class="py-24 relative z-10">
+        <!-- Form section with visible glass backdrop against orbs -->
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-3xl p-8 md:p-12 shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-3">Global Enrollment Portal</h2>
+                    <p class="text-gray-400">Select your program below. Once submitted, our system will log your application and connect you directly with our team via WhatsApp.</p>
+                </div>
+
+                <form id="havoxForm" class="space-y-6">
+                    <div>
+                        <label for="program" class="block text-sm font-medium text-gray-300 mb-2">Select Program *</label>
+                        <select id="program" name="program" required class="w-full px-4 py-3 rounded-xl appearance-none">
+                            <option value="" disabled selected>Choose a program...</option>
+                            <option value="Havox AI Program (Student)">Havox AI Program (Student Cohort)</option>
+                            <option value="Junior Vox (Students)">Junior Vox - Public Speaking (Students)</option>
+                            <option value="VoX-Publica">VoX-Publica - The Art of Public Speaking</option>
+                            <option value="Havox-ELITE">Havox-ELITE - Executive Training</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="contact" class="block text-sm font-medium text-gray-300 mb-2">WhatsApp Number *</label>
+                            <input type="tel" id="contact" name="contact" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl">
+                        </div>
+                        <div>
+                            <label for="age" class="block text-sm font-medium text-gray-300 mb-2">Age *</label>
+                            <input type="number" id="age" name="age" required min="8" max="100" placeholder="18" class="w-full px-4 py-3 rounded-xl">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="education" class="block text-sm font-medium text-gray-300 mb-2">Highest Education Level *</label>
+                            <input type="text" id="education" name="education" required placeholder="High School / B.Tech / MBA" class="w-full px-4 py-3 rounded-xl">
+                        </div>
+                        <div>
+                            <label for="status" class="block text-sm font-medium text-gray-300 mb-2">Current Status *</label>
+                            <select id="status" name="status" required class="w-full px-4 py-3 rounded-xl appearance-none">
+                                <option value="" disabled selected>Select status...</option>
+                                <option value="Student">Student</option>
+                                <option value="Working Professional">Working Professional</option>
+                                <option value="Business Owner">Business Owner</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="place" class="block text-sm font-medium text-gray-300 mb-2">City / District *</label>
+                        <input type="text" id="place" name="place" required placeholder="e.g., Kozhikode" class="w-full px-4 py-3 rounded-xl">
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="w-full bg-white hover:bg-gray-200 text-black font-bold py-4 px-8 rounded-xl transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] mt-4 flex justify-center items-center gap-2">
+                        <span>Submit & Connect on WhatsApp</span>
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </button>
+
+                    <div id="statusMessage" class="hidden text-center text-sm mt-4 p-4 rounded-xl border font-medium"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-auto border-t border-white/10 py-10 relative z-10 glass-panel">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-xl font-bold tracking-wider mb-2 text-white">HAVOX <span class="font-light text-gray-400">INTERNATIONAL</span></h3>
+            <p class="text-gray-500 text-sm mb-6">Empowering minds through AI and Communication.</p>
+            <p class="text-gray-600 text-xs">&copy; 2026 Havox International. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('havoxForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); 
+
+            const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyAF7uczSn9C4SqMU6i0GB46dIl3V6MnHiRkErAunLTcK0dDTQxQMfiUEV-OfmqsBxBEw/exec"; 
+            const YOUR_WHATSAPP_NUMBER = "9188289158"; 
+
+            const submitBtn = document.getElementById('submitBtn');
+            const statusMsg = document.getElementById('statusMessage');
+            const formData = new FormData(this);
+            
+            const data = {
+                program: formData.get('program'),
+                name: formData.get('name'),
+                email: formData.get('email'),
+                age: formData.get('age'),
+                education: formData.get('education'),
+                status: formData.get('status'),
+                contact: formData.get('contact'),
+                place: formData.get('place'),
+                timestamp: new Date().toLocaleString()
+            };
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Processing...';
+            
+            try {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                statusMsg.className = "text-center text-sm mt-4 p-4 rounded-xl border font-medium glass-panel border-white/30 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)]";
+                statusMsg.innerText = "Application logged! Redirecting to WhatsApp...";
+
+                const waMessage = `Hello Havox International! 👋\n\nI am submitting my application. Here are my details:\n\n*Name:* ${data.name}\n*Email:* ${data.email}\n*Program:* ${data.program}\n*Age:* ${data.age}\n*Status:* ${data.status}\n*Location:* ${data.place}\n\nLooking forward to the next steps!`;
+                
+                const whatsappUrl = `https://wa.me/${YOUR_WHATSAPP_NUMBER}?text=${encodeURIComponent(waMessage)}`;
+                
+                setTimeout(() => {
+                    window.location.href = whatsappUrl;
+                    document.getElementById('havoxForm').reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<span>Submit & Connect on WhatsApp</span><i class="fa-brands fa-whatsapp text-xl"></i>';
+                    statusMsg.className = "hidden";
+                }, 1500);
+
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                statusMsg.className = "text-center text-sm mt-4 p-4 rounded-xl border font-medium glass-panel border-red-500/50 text-white shadow-[0_0_15px_rgba(255,0,0,0.2)]";
+                statusMsg.innerText = "There was an error connecting to the server. Please try again.";
+                
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span>Submit & Connect on WhatsApp</span><i class="fa-brands fa-whatsapp text-xl"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
